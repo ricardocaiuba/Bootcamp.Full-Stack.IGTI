@@ -10,7 +10,7 @@
 	- Excelente fonte de documentação: https://developer.mozilla.org/pt-BR/docs/Web/HTML
 
 - **Estrutura de um elemento HTML**
-![Estrutura de um elemento HTML](https://upload.wikimedia.org/wikipedia/commons/7/7b/Estrutura_de_um_elemento_HTML.svg)
+	- ![Estrutura de um elemento HTML](https://upload.wikimedia.org/wikipedia/commons/7/7b/Estrutura_de_um_elemento_HTML.svg)
 
 - **Principais tags HTML para marcação**
 	- `<p>: parágrafos`
