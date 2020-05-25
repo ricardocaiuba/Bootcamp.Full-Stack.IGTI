@@ -1,0 +1,33 @@
+## Aula 4.1 
+### Noções de CSS
+---
+- **CSS:**
+	- Introdução
+		- Cascading Style Sheets
+		- Permite a estilização do conteúdo HTML
+		- Foco no conteúdo visual
+		- Utilizada de forma declarativa
+		- Permite alterações de cores, estilos de texto e posicionamento de elementos
+		- Pode ser definido no HTML de 3 formas:
+			- Atributo **style**
+			- Tag **style**
+			- Arquivo externo
+	- Sintaxe
+	- ![Sintaxe do CSS](https://mdn.mozillademos.org/files/9461/css-declaration-small.png)
+	- Elementos x classes x id's
+		- Elemento:
+			- Utiliza todos os elementos conforme identificador.
+			- Representado pelo nome da tag.
+		- Classe:
+			- Estiliza todos os elementos que possuam a classe (atributo **class**);
+			- Representado no CSS por um ponto (.). 
+		- Id:
+			- Estiliza o elemento que possui o Id (atributo **id**).
+			- Geralmente deve ser feito para um único elemento.
+			- Representado no CSS por uma hashtag (**#**).
+	- CSS Reset
+		- Técnica para remover CSS padrão dos navegadores.
+		- Auxilia na padronização visual do site.
+		- Deve ser feita antes de qualquer outra declaração de CSS.
+		- Há diversas maneiras para se fazer o CSS Reset.
+		- Uma das técnicas mais utilizadas é a inserção do arquivo reset.css, criado por Eric Meyer.
