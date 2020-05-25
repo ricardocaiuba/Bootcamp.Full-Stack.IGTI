@@ -1,0 +1,35 @@
+## Aula 5.3 
+### JavaScript básico
+---
+- **JavaScript - Console:**
+	- Operadores aritméticos:
+		- Soma -> **+**
+		- Subtração -> **-**
+		- Multiplicação -> *
+		- Divisão -> **/**
+		- Exponenciação -> **
+		- Resto da divisão -> **%**
+		- Incremento -> **++**
+		- Decremento -> **- -** 
+	- Operadores de atribuição :
+		- Atribuição padrão -> **=**
+		- Atribuição com operação: -> += -= *= /= %=
+	- Operadores de comparação:
+		- Igualdade -> **===**
+		- Diferença -> **!==**
+		- Maior -> **>**
+		- Menor -> **<**
+		- Maior ou Igual -> **>=**
+		- Menor ou Igual -> **<=**
+	- Operadores lógicos:
+		- E -> **&&**
+		- OU -> **||**
+		- Negação -> **!**
+	- Console.
+		- Muito útil para testes simples e depuração de código (debug).
+		- Principal comando: `console.log()`.
+	- Comentários.
+		- Muito útil para descrever operações complexas.
+		- Algumas formas:
+			- Comentários de linha: // Comentário
+			- Comentários de bloco: /* Comentário */
