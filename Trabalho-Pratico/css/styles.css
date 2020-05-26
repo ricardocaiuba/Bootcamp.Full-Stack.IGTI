@@ -1,0 +1,32 @@
+body {
+  font-family: "Fira Code", Consolas;
+  padding: 20px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.label {
+  min-width: 130px;
+}
+
+.range {
+  min-width: 200px;
+}
+
+.text {
+  margin-left: 10px;
+  width: 50px;
+  text-align: center;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lightgray;
+  margin-top: 20px;
+}
