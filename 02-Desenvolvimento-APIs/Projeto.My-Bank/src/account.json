@@ -1,0 +1,17 @@
+{
+  "nextId": 9,
+  "accounts": [
+    { "id": 1, "name": "Trovão", "balance": 1154.8 },
+    { "id": 2, "name": "Ricardo Rodrigues", "balance": 150.48 },
+    { "id": 3, "name": "Carolline Lourenço", "balance": 753.4 },
+    { "id": 4, "name": "Canjica", "balance": 1452.66 },
+    { "id": 5, "name": "Ricardo Rodrigues dos Santos - PJ", "balance": 459.74 },
+    {
+      "id": 6,
+      "name": "Vilma Domingas Rodrigues dos Santos",
+      "balance": 1235.56
+    },
+    { "id": 7, "name": "José de Oliveira", "balance": 235 },
+    { "id": 8, "name": "Renato", "balance": 1235.02 }
+  ]
+}

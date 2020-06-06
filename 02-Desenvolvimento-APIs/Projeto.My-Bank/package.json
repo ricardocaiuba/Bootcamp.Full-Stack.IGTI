@@ -2,10 +2,14 @@
   "name": "projeto.my-bank",
   "version": "1.0.0",
   "description": "Projeto My Bank API - Bootcamp FullStack - IGTI",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ricardo Rodrigues dos Santos - ricardocaiuba",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
