@@ -1,0 +1,11 @@
+{
+  "name": "projeto.my-bank",
+  "version": "1.0.0",
+  "description": "Projeto My Bank API - Bootcamp FullStack - IGTI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ricardo Rodrigues dos Santos",
+  "license": "ISC"
+}
