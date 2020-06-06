@@ -5,12 +5,15 @@
   "main": "src/app.js",
   "scripts": {
     "dev": "nodemon src/app.js",
+    "dev-index": "nodemon src/index.js",
+    "dev-index2": "nodemon src/index2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ricardo Rodrigues dos Santos",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "winston": "^3.2.1"
   },
   "type": "module"
 }
