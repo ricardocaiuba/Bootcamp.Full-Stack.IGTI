@@ -1,0 +1,33 @@
+## Aula 1.6
+### NPM
+---
+- **NPM**
+	- NPM é a sigla para Node Pachage Manager, é o gerenciador de pacotes do Node.js
+	- Ele é um repositório on-line para publicação de projetos de código aberto.
+	- Ferramenta de linha de comando auxilia na instalação de pacotes, gerenciamento de versão e gestão de dependências.
+	- Ele possui milhares de bibliotecas publicas, algumas bem famosas e que são utilizadas por muitas aplicações.
+	- Adicionar biblioteca:
+		- `npm install <nome-da-biblioteca>`.
+	- Desinstalar biblioteca:
+		- `npm uninstall <nome-da-biblioteca>`. 
+	- Grande partes dos frameworks JavaScript funcionam em conjunto com o NPM.
+	- Uma aplicação que utiliza o NPM como gerenciador de dependências deve possuir um arquivo chamado ***package.json***.
+	- Ao lado do nomedo pacote também é informado sua versão que será baixada.
+	- Instalar uma versão específica:
+		- `npm install <nome-da-Biblioteca>@<versão>`.
+	- A partir da versão 5 do NPM foi adicionado um arquivo chamado ***pachage-lock-json***.
+	- Ele serve para garantir a consistência das dependências entre as máquinas.
+	- ***package-lock.json*** mantém a última versão que foi instalada, a localização de pacote e um código ***hash*** para verificar sua integridade.
+	- Geralmente, ao versionar os projetos do GIT ou SVN por exemplo, a pasta node_modules não é versionada.
+	- Ao instalar uma nova dependência no projeto ela é automaticamente incluída no ***package.json***.
+	- **NPM - package.json**
+		- name: nome do pacote.
+		- version: versão do pacote.
+		- description: descrição do pacote.
+		- homepage: site do pacote.
+		- author: nome do autor do pacote.
+		- repository: o tipo do repositório e a URL do pacote.
+		- main: o ponto de entrada do pacote.
+		- keywords: palavras chave do pacote.
+		- dependencies: lista de todas as dependências do pacote, que serão instaladas na pasta node_modules do projeto pelo comando npm install.
+		- devDependencies: dependências somente de desenvolvimento. Um pacote é listado aqui quando instalado com a flag **--serve-dev**.
