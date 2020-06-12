@@ -1,69 +1,45 @@
-var express = require("express");
-var fs = require("fs");
-var app = express();
+import express from "express";
+import { promises as fs } from "fs";
+import winston from "winston";
+import accountsRouter from "./routes/accounts.js";
+import swaggerUI from "swagger-ui-express";
+import { swaggerDocument } from "../doc.js";
 
-app.use(express.json());
+const app = express();
 
-var port = 3000;
-const accountJSON = "src/account.json";
-
-app.post("/account", (req, res) => {
-  let account = req.body;
-  const { name, balance } = account;
-
-  fs.readFile(accountJSON, "utf8", (err, data) => {
-    if (!err) {
-      try {
-        let json = JSON.parse(data);
-        account = { id: json.nextId, ...account };
-        json.nextId++;
-        json.accounts.push(account);
-
-        fs.writeFile(accountJSON, JSON.stringify(json), (er) => {
-          if (er) {
-            res.status(400).send({
-              message: "Erro na gravação",
-              error: er.message,
-            });
-          } else {
-            res.send({
-              message: `Post account: ${name} - ${balance} created.`,
-              account,
-            });
-          }
-        });
-      } catch (err) {
-        res.status(400).send({
-          message: "Bad request",
-          error: err.message,
-        });
-      }
-    } else {
-      res.status(400).send({
-        message: "Erro na leitura",
-        error: err.message,
-      });
-    }
-  });
+const { combine, timestamp, label, printf } = winston.format;
+const myFormat = printf(({ level, message, label, timestamp }) => {
+  return `${timestamp} [${label}] ${level}: ${message}`;
 });
 
-app.listen(port, () => {
+const port = 3000;
+global.fileName = "src/account.json";
+global.logger = winston.createLogger({
+  level: "silly",
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: "my-bank-api.log" }),
+  ],
+  format: combine(label({ label: "my-bank-api" }), timestamp(), myFormat),
+});
+
+app.use(express.json());
+app.use("/account", accountsRouter);
+app.use("/doc", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
+app.listen(port, async () => {
   try {
-    fs.readFile(accountJSON, "utf8", (err, data) => {
-      if (err) {
-        const initialJSON = {
-          nextId: 1,
-          accounts: [],
-        };
-        fs.writeFile(accountJSON, JSON.stringify(initialJSON), (err) => {
-          if (err) {
-            console.log(err);
-          }
-        });
-      }
-    });
+    await fs.readFile(global.fileName, "utf8");
+    logger.info(`API started on port ${port}...`);
   } catch (error) {
-    console.log(error);
+    const initialJSON = {
+      nextId: 1,
+      accounts: [],
+    };
+    try {
+      await fs.writeFile(global.fileName, JSON.stringify(initialJSON));
+    } catch (error) {
+      logger.error(`Error: ${error.message}...`);
+    }
   }
-  return console.log(`API started on port ${port}...`);
 });
