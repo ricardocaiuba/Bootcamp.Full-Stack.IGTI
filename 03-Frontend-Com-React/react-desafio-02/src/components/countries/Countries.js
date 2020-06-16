@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import Country from "./Country";
+import css from "./countries.module.css";
 
 class Countries extends Component {
   render() {
     const { countries } = this.props;
     return (
-      <ul>
+      <div className={`${css.border} ${css.flexRow}`}>
         {countries.map((country, index) => {
           return (
-            <li key={index}>
-              <Country country={country} />
-            </li>
+            <Country key={index} country={country} />
           );
         })}
-      </ul>
+      </div>
     );
   }
 }
