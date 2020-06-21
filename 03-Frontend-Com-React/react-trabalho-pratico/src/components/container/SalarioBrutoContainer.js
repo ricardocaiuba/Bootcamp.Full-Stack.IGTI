@@ -49,7 +49,7 @@ class SalarioBrutoContainer extends Component {
         <div className="row">
           <div className="col">
             <div className="card">
-              <h4 class="card-header bg-info">
+              <h4 className="card-header bg-info">
                 <span className={css.titleCard}>React Salário</span>
               </h4>
               <div className="card-body" style={{ backgroundColor: "#fafafa" }}>
