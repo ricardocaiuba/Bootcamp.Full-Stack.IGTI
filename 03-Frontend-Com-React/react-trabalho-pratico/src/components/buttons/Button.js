@@ -1,9 +1,22 @@
-import React, { Component } from "react";
+import React, { Component, StrictMode } from "react";
 
 class Button extends Component {
   render() {
-    const { className, children } = this.props;
-    return <button className={className}>{children}</button>;
+    const { className, children, toggle, target, showModal } = this.props;
+
+    return (
+      <StrictMode>
+        <button
+          type="button"
+          className={className}
+          data-toggle={toggle}
+          data-target={target}
+        >
+          {children}
+        </button>
+        {showModal()}
+      </StrictMode>
+    );
   }
 }
 
